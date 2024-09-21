@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Help Page!!</h1>
+    <a href="{% url 'home' %}">Home</a>
+    <form method="post">
+        {% csrf_token %}
+        <!-- A CROSS SITE REQUSET FORGERY -->
+        <label for="user">Name: </label>
+        <input type="text" name="uname" id="user">
+        <br>
+        <br>
+        <label for="user">Email:</label>
+        <input type="email" name="uemail" id="ok">
+        <br>
+        <br>
+        <input type="submit">
+    </form>
+</body>
+</html>
